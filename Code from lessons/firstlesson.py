@@ -13,9 +13,9 @@ def domath():
     print(a)
 
 
-    sub = 10 - 5
-    mul = 6 * 3
-    div = 9 / 3
+    #sub = 10 - 5
+    #mul = 6 * 3
+    #div = 9 / 3
 
     squaredvalue = 15 ** 2
     print(squaredvalue)
