@@ -85,6 +85,17 @@ def loops():
     for number in numbers:
         print(number)
 
+def passVariable(variable):
+    print(variable)
+
+def passVariable(number):
+    newnumber = number * 2
+    print(newnumber)
+
+def returnVariable():
+    value = 4
+    value += 6
+    return value
 
 
 if __name__ == "__main__":
@@ -106,3 +117,8 @@ if __name__ == "__main__":
     learnLists()
     conditionals()
     loops()
+
+    variable = 2
+    passVariable(variable)
+
+    value = returnVariable()
