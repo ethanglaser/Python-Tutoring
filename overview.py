@@ -97,6 +97,19 @@ def returnVariable():
     value += 6
     return value
 
+def getInput():
+    print("What is your favorite food?")
+    favorite = input()
+    print(favorite)
+
+
+def listFunctions():
+    newList = [1,2,3,4,5]
+    listLength = len(newList) #5
+    listSum = sum(newList) #15
+    listMin = min(newList) #1
+    listMax = max(newList) #5
+
 
 if __name__ == "__main__":
 
