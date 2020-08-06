@@ -11,7 +11,12 @@ def sumSquared(number):
 # I recommend using a while loop
 # example: function(4,6) = 12
 # example: function(8,20) = 40
-
+def lcm(value1, value2):
+    current = 1
+    while current <= (value1 * value2):
+        if current % value1 == 0 and current % value2 == 0:
+            return current
+        current += 1
 
 # Write a function that takes in two numbers and finds the largest number that evenly divides each number (greatest common factor)
 # Again I recommend using a while loop
@@ -31,4 +36,8 @@ def sumSquared(number):
 
 
 if __name__ == "__main__":
-    sumSquared(20)
+    lcm1 = lcm(4,6)
+    print(lcm1)
+    lcm2 = lcm(8,20)
+    print(lcm2)
+    print(lcm(12345,99))
