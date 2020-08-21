@@ -88,7 +88,7 @@ def loops():
 def passVariable(variable):
     print(variable)
 
-def passVariable(number):
+def passVariable2(number):
     newnumber = number * 2
     print(newnumber)
 
@@ -110,6 +110,61 @@ def listFunctions():
     listMin = min(newList) #1
     listMax = max(newList) #5
 
+def otherList():
+    myList = [1,2,3,4]
+    myList.append(5)
+    print(myList)
+    if 3 in myList:
+        print("3 is in myList")
+    else:
+        print("3 is not in myList")
+    if 10 in myList:
+        print("10 is in myList")
+    else:
+        print("10 is not in myList")
+
+def readFile():
+    with open("Data Files/overview.txt", 'r') as f:
+        text = f.readlines()
+    for line in text:
+        print(int(line))
+
+def firstStrings():
+    string1 = "a"
+    string2 = "Hi my name is Ethan"
+    string3 = str(12)
+
+    newString = "abcdefg"
+    print(newString[0])
+    for character in newString:
+        print(character)
+
+    #find length of a string the same way as a lit
+    string1 = "abcdefghijklmnopqrstuvwxyz"
+    print(len(string1))
+
+    #strings do not have an append function but can be combined
+    string1 += "ABC"
+    print(string1)
+
+    #some list functions are more relevant to strings than lists
+    string2 = "Mississippi"
+    print(string2.count("i"))
+
+    string1 = "abcdefghijklmnopqrstuvwxyz"
+    print(string1[-5:])
+
+    string2 = "Minnesota Vikings"
+    print(string2[5:15])
+
+    sentence1 = "Hello my name is Ethan"
+    print(sentence1.split())
+    numbers = "1,2,3,4,5,6,7,8,9"
+    print(numbers.split(','))
+
+
+
+
 
 if __name__ == "__main__":
 
@@ -123,7 +178,7 @@ if __name__ == "__main__":
     before and after
     '''
 
-    helloWorld()
+    '''helloWorld()
     declareVariables()
     value = returnOne()
     doMath()
@@ -134,4 +189,7 @@ if __name__ == "__main__":
     variable = 2
     passVariable(variable)
 
-    value = returnVariable()
+    value = returnVariable()'''
+    #otherList()
+    #readFile()
+    firstStrings()
