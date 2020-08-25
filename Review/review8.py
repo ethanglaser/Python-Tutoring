@@ -25,6 +25,13 @@
 # Treat capital and lowercase letters as separate values
 # Can use built-in functions
 # example: function("There are 50 states in the United States.") would return 'e'
+def findMost(sentence):
+    sentence.replace(" ", "")
+    maxFrequency = 0
+    for letter in sentence:
+        if sentence.count(letter) > maxFrequency:
+            maxFrequency = sentence.count(letter)
+            maxLetter = letter
 
 
 # Write a function that takes in a string and returns either 'character', 'word', or 'sentence' depending on the input
