@@ -1,4 +1,6 @@
 import math
+import os
+import sys
 
 def function():
     return
@@ -162,7 +164,9 @@ def firstStrings():
     numbers = "1,2,3,4,5,6,7,8,9"
     print(numbers.split(','))
 
-
+def osStuff():
+    print(os.curdir)
+    print(os.listdir(os.curdir))
 
 
 
@@ -192,4 +196,5 @@ if __name__ == "__main__":
     value = returnVariable()'''
     #otherList()
     #readFile()
-    firstStrings()
+    #firstStrings()
+    osStuff()
