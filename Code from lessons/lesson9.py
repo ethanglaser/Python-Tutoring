@@ -23,7 +23,7 @@ def function2():
         print(letter)
 
 def lengthOfString(myString):
-    total = 1
+    total = 0
     for char in myString:
         total += 1
     return total
@@ -82,13 +82,13 @@ if __name__ == "__main__":
     #firstLetters(stringList)
     splitting()
 
-    numList = [1,2,3,4,5]
+    '''numList = [1,2,3,4,5]
     stringList = []
     for num in numList:
         stringList.append(str(num))
 
     groceryString = 'apples, banana, carrots, peach, grapes, plum, pepper'
-    groceries(groceryString)
+    groceries(groceryString)'''
 
 
 
