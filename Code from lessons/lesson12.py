@@ -19,6 +19,10 @@ def buildings():
 
 def longword():
     words = firstfunction('manyWords.txt')
+    newWords = []
+    for word in words:
+        newWords.append(word.strip())
+    print(newWords)
     leng = 0
     for word in words:
         if len(word) > leng:
