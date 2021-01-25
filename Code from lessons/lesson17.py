@@ -5,6 +5,16 @@ import os
 # strings - contains, split
 # NLP Project - several mystery files mystery-#.txt, create dictionary with # as key and language as value
 
+def stuff():
+    files = os.listdir("../ProjectData")
+
+
+
+
+
+
+
+
 
 
 # QUIZ
@@ -43,4 +53,5 @@ def quiz():
 
 if __name__ == "__main__":
     #quiz()
-    print(os.listdir("../ProjectData"))
+    stuff()
+    #print(os.listdir("../ProjectData"))
