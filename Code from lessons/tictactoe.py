@@ -9,11 +9,67 @@ def displayGrid(info):
     print('  |' + info[2][0] + '|' + info[2][1] + '|' + info[2][2] + '|')
     print('2 |_|_|_|')
 
+def gameOver(info):
+    if ('X' == info[0][0] and 'X' == info[0][1] and 'X' == info[0][2]) or ('X' == info[0][0] and 'X' == info[1][1] and 'X' == info[2][2]) or ('X' == info[0][0] and 'X' == info[1][0] and 'X' == info[2][0]) or ('X' == info[1][0] and 'X' == info[1][1] and 'X' == info[1][2]) or ('X' == info[2][0] and 'X' == info[1][1] and 'X' == info[0][2]) or ('X' == info[1][1] and 'X' == info[2][1] and 'X' == info[0][1]) or ('X' == info[1][2] and 'X' == info[2][2] and 'X' == info[0][2]):
+        print("Player 1 wins! Game over.")
+        displayGrid(info)
+        return 1
+    elif ('O' == info[0][0] and 'O' == info[0][1] and 'O' == info[0][2]) or ('O' == info[0][0] and 'O' == info[1][1] and 'O' == info[2][2]) or ('O' == info[0][0] and 'O' == info[1][0] and 'O' == info[2][0]) or ('O' == info[1][0] and 'O' == info[1][1] and 'O' == info[1][2]) or ('O' == info[2][0] and 'O' == info[1][1] and 'O' == info[0][2]) or ('O' == info[1][1] and 'O' == info[2][1] and 'O' == info[0][1]) or ('O' == info[1][2] and 'O' == info[2][2] and 'O' == info[0][2]):
+        print("Player 2 wins! Game over.")
+        displayGrid(info)
+        return 1
+    for row in info:
+        for val in row:
+            if val != ' ':
+                return 0    
+    displayGrid(info)
+    print('Tie. Game over.')
+    return 1
+
+def game(info):
+    moves = 1
+    chars = {1: "X", 2: "O"}
+    while moves <= 9:
+        if moves % 2 == 1:
+            player = 1
+        elif moves % 2 == 0:
+            player = 2
+        coords = input("Player " + str(player) + " make your move: ")
+        row = int(coords[0])
+        col = int(coords[2])
+        if info[row][col] == ' ':
+            info[row][col] = chars[player]
+        if gameOver(info) == 1:
+            return
+        displayGrid(info)
+            
+        
+        
+
+
+
+        # process the input
+
+        # check if the move is valid
+
+        # update list, call displaygrid
+
+        # check if player has 3 in a row
+
+
+    
+
+
+        moves = moves + 1
+
+
+
 
 
 if __name__ == "__main__":
-    info = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']] 
+    info = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
     displayGrid(info)
+    game(info)
 
     # Use the input() function to take in the choices of each player
     # ex: coordinates = input("Player 1, which coordinates would you like to place an X?")
